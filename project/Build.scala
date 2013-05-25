@@ -10,12 +10,14 @@ object ApplicationBuild extends Build {
   val appDependencies = Seq(
     // Add your project dependencies here,
     jdbc,
-    anorm
+    anorm,
+     "org.cloudfoundry" % "auto-reconfiguration" % "0.6.6"
   )
 
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
-    // Add your own project settings here      
+    // spring maven repository      
+    resolvers += "Spring Milestone Repository" at "http://maven.springframework.org/milestone"      
   )
 
 }

@@ -1,0 +1,14 @@
+---
+applications:
+  dist\gather-1.0-SNAPSHOT.zip:
+    name: gatherus
+    framework:
+      name: play
+      info:
+        mem: 256M
+        description: Play Framework Application
+        exec: 
+    infra: aws
+    url: ${name}.${target-base}
+    mem: 256M
+    instances: 1
